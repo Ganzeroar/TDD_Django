@@ -13,7 +13,7 @@ class NewVisitorTest(unittest.TestCase):
     
     def test_can_start_a_list_and_retrieve_it_later(self):
         '''тест: можно начать список и получить его позже'''
-        # Эдит слышала про крутое новое онлайн-приложение со
+        # Эдит слышала про крутое новое онлайн приложение со
         # списком неотложных дел. Она решает оценить его
         # домашнюю страницу
         self.browser.get('http://localhost:8000')
