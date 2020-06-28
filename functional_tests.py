@@ -1,4 +1,6 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
 import unittest
 class NewVisitorTest(unittest.TestCase):
     '''тест нового посетителя'''
@@ -40,10 +42,11 @@ class NewVisitorTest(unittest.TestCase):
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
 
-        taable = self.browser.find_element_by_id('id_list_table')
+        table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
         self.assertTrue(
-            any(row.text == '1: Купить павлиньи перья' for row in rows)
+            any(row.text == '1: Купить павлиньи перья' for row in rows),
+            "new item did not appear in the table"
         )
 
         # Текстовое поле по-прежнему приглашает ее добавить еще один элемент.
