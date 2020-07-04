@@ -21,7 +21,7 @@ class HomePageTest(TestCase):
         self.assertTemplateUsed(response, 'home.html')
 
 class ItemModelTest(TestCase):
-    '''item model test'''
+    '''item model test_1'''
 
     def test_saving_and_retrieving_items(self):
         first_item = Item()
