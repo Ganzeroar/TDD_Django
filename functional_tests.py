@@ -47,7 +47,7 @@ class NewVisitorTest(unittest.TestCase):
         # содержит "1: Купить павлиньи перья" в качестве элемента списка
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
-        self.check_for_row_in_list_table('1: Купить павлиньи перья')
+        self.check_for_row_in_list_table('1 : Купить павлиньи перья')
 
         # Текстовое поле по-прежнему приглашает ее добавить еще один элемент.
         # Она вводит "Сделать мушку из павлиньих перьев" (Эдит очень методична)
@@ -57,8 +57,8 @@ class NewVisitorTest(unittest.TestCase):
         time.sleep(1)
 
         # Страница снова обновляется, и теперь показывает оба элемента ее списка
-        self.check_for_row_in_list_table('1: Купить павлиньи перья')
-        self.check_for_row_in_list_table('2: Сделать мушку из павлиньих перьев')
+        self.check_for_row_in_list_table('1 : Купить павлиньи перья')
+        self.check_for_row_in_list_table('2 : Сделать мушку из павлиньих перьев')
 
         # Эдит интересно, запомнит ли сайт ее список. Далее она видит, что
         # сайт сгенерировал для нее уникальный URL-адрес – об этом
